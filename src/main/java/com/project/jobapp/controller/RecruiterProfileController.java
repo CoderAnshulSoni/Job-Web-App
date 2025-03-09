@@ -75,7 +75,7 @@ public class RecruiterProfileController {
 
         RecruiterProfile savedUser = recruiterProfileService.addNew(recruiterProfile);
 
-        String uploadDir = "/photos/recruiter/" + savedUser.getUserAccountId();
+        String uploadDir = "photos/recruiter/" + savedUser.getUserAccountId();
 
         try{
             FileUploadUtil.saveFile(uploadDir, fileName, multipartFile);
